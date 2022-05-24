@@ -1,0 +1,17 @@
+.navbar{
+    background: #0d6efd;
+}
+
+.navbar-brand img{
+    width: 13rem;
+    min-width: 100%;
+}
+
+section{
+    margin-top: 7rem;
+}
+
+.nav-link{
+    border: 0 !important;
+    background: #fff !important;
+}

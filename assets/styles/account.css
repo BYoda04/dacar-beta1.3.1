@@ -1,0 +1,26 @@
+
+.button-container{
+    background: #202530 !important;
+}
+
+.button-container a,.button-container button{
+    margin: 1rem;
+}
+
+.accounts{
+    background: #202530;
+}
+
+.list-group{
+    margin: 1rem;
+    background: #202530;
+}
+
+.list-group-item{
+    margin: 1rem 0;
+    border-radius: inherit;
+}
+
+.error{
+    border: .15rem solid red !important;
+}
