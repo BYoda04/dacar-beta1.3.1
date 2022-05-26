@@ -7,12 +7,15 @@ class User extends DB{
     private $id;
     private $camp;
     private $turn;
+    private $num;
 
-    public function searchUser($name,$pass){
-        $userMinun = strtolower($name);
+    public function searchUser($name,$paterno,$materno){
+        $nameMinun = strtolower($name);
+        $paternoMinun = strtolower($paterno);
+        $maternoMinun = strtolower($materno);
 
-        $query = $this->connect()->prepare('SELECT * FROM users WHERE user_name= :user AND password= :pass');
-        $query->execute(['user' => $userMinun, 'pass' => $pass]);
+        $query = $this->connect()->prepare('SELECT * FROM supervisores WHERE name= :user AND paterno= :paterno AND materno= :materno');
+        $query->execute(['user' => $nameMinun, 'paterno' => $paternoMinun, 'materno' => $maternoMinun]);
 
         if($query->rowCount()){
             return true;
@@ -21,30 +24,31 @@ class User extends DB{
         }
     }
 
-    public function setID($name){
-        $userMinun = strtolower($name);
-        $query = $this->connect()->prepare('SELECT * FROM users WHERE user_name = :user');
-        $query->execute(['user' => $userMinun]);
+    public function setID($name,$paterno,$materno){
+        $nameMinun = strtolower($name);
+        $paternoMinun = strtolower($paterno);
+        $maternoMinun = strtolower($materno);
+
+        $query = $this->connect()->prepare('SELECT * FROM supervisores WHERE name= :user AND paterno= :paterno AND materno= :materno');
+        $query->execute(['user' => $nameMinun, 'paterno' => $paternoMinun, 'materno' => $maternoMinun]);
 
         foreach ($query as $currentUser) {
-            $this->id = $currentUser['id_user'];
+            $this->id = $currentUser['id_supervisor'];
+            $this->camp = $currentUser['camp_cod'];
+            $this->turn = $currentUser['turn_cod'];
+            $this->num = $currentUser['asesores'];
         }
     }
 
-    public function setCamp($camp){
-        if ($camp == "Hogar") {
-            $this->camp = 1;
-        } else {
-            $this->camp = 2;
-        }  
-    }
+    public function asesorExist($name,$paterno,$materno,$cod){
+        $query = $this->connect()->prepare('SELECT * FROM asesores WHERE asesor_name= :asesor AND paterno= :paterno AND materno= :materno AND sup_cod= :cod');
+        $query->execute(['asesor' => $name, 'paterno' => $paterno, 'materno' => $materno,'cod' => $cod]);
 
-    public function setTurn($turn){
-        if ($turn == "Mañana") {
-            $this->turn = 1;
-        } else {
-            $this->turn = 2;
-        }  
+        if($query->rowCount()){
+            return true;
+        }else{
+            return false;
+        }
     }
 
     public function getID(){
@@ -57,6 +61,10 @@ class User extends DB{
 
     public function getTurn(){
         return $this->turn;
+    }
+
+    public function getNumAsesor(){
+        return $this->num;
     }
 
 }

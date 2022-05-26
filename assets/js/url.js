@@ -1,6 +1,0 @@
-let urlRol = "http://localhost/dacartelecom-beta1.3.1/assets/api-rest/rol/index.php"
-let urlSup = "http://localhost/dacartelecom-beta1.3.1/assets/api-rest/supervisores/index.php"
-let urlUsers = "http://localhost/dacartelecom-beta1.3.1/assets/api-rest/users/index.php"
-let urlSend = "http://localhost/dacartelecom-beta1.3.1/assets/post/settings/update-password.php"
-let urlCreateSup = "http://localhost/dacartelecom-beta1.3.1/assets/post/account/create-sup/create-sup.php"
-let urlCreateAsesor ="http://localhost/dacartelecom-beta1.3.1/assets/post/account/create-asesor/create-asesor.php"

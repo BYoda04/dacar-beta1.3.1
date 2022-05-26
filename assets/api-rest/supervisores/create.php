@@ -17,8 +17,14 @@
                 while ($row = $res->fetch(PDO::FETCH_ASSOC)) {
                     $item = array(
                         'id_supervisor' => $row['id_supervisor'],
-                        'supervisor_name' => $row['supervisor_name'],
-                        'user_cod' => $row['user_cod']
+                        'user_name' => $row['user_name'],
+                        'name' => $row['name'],
+                        'apellido_paterno' => $row['paterno'],
+                        'apellido_materno' => $row['materno'],
+                        'user_cod' => $row['user_cod'],
+                        'camp_cod' => $row['camp_cod'],
+                        'turn_cod' => $row['turn_cod'],
+                        'asesores' => $row['asesores']
                     );
                     array_push($datos['items'],$item);
                 }

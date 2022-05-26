@@ -1,2 +1,5 @@
 
-console.log(supAsesor)
+
+setTimeout(() => {
+    console.log(productApi);
+}, 900);

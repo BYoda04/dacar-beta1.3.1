@@ -18,6 +18,8 @@
                     $item = array(
                         'id_asesor' => $row['id_asesor'],
                         'asesor_name' => $row['asesor_name'],
+                        'paterno' => $row['paterno'],
+                        'materno' => $row['materno'],
                         'sup_cod' => $row['sup_cod'],
                         'camp_cod' => $row['camp_cod'],
                         'turn_cod' => $row['turn_cod'],

@@ -9,10 +9,18 @@
 
     <!--CONST-->
     <script src="./assets/js/const.js"></script>
-    <!--URL-->
-    <script src="./assets/js/url.js"></script>
+    <!--URL GET-->
+    <script src="./assets/js/url-get.js"></script>
+    <!--URL POST-->
+    <script src="./assets/js/url-post.js"></script>
+    <!--URL GET TWO-->
+    <script src="./assets/js/url-get-two.js"></script>
     <!--API-->
     <script src="./assets/js/api.js"></script>
+    <!--API TWO-->
+    <script src="./assets/js/api-two.js"></script>
+    <!--FUNCTIONS-->
+    <script src="./assets/js/functions.js"></script>
     <!--OPTIONS-->
     <script src="./assets/js/options.js"></script>
     <!--TITLE-->
@@ -23,6 +31,12 @@
     <script src="./assets/js/create-sup.js"></script>
     <!--CREATE ASESOR-->
     <script src="./assets/js/create-asesor.js"></script>
+    <!--DELETE SUP-->
+    <script src="./assets/js/delete-sup.js"></script>
+    <!--DELETE ASESOR-->
+    <script src="./assets/js/delete-asesor.js"></script>
+    <!--SUP LIST-->
+    <script src="./assets/js/sup-list.js"></script>
     <!--PROOB-->
     <script src="./assets/js/proob.js"></script>
 

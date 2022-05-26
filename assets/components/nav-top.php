@@ -14,6 +14,8 @@
     <link rel="stylesheet" href="./assets/styles/settings.css">
     <!--STYLES ACCOUNT-->
     <link rel="stylesheet" href="./assets/styles/account.css">
+    <!--STYLES DATA-->
+    <link rel="stylesheet" href="./assets/styles/data.css">
     <!-- CSS BOOTSTRAP -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
     <!--BOOTSTRAP ICONS-->

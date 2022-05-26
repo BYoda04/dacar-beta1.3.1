@@ -3,12 +3,14 @@
     </nav>
     <section class="home">
         <div class="container-fluid justify-content-center align-items-center title">
-            <div class="col-5">
+            <div class="col justify-content-center align-items-center">
                 <div class="row">
                     <h2 id="name"><?php echo $user->getUserName();  ?></h2>
                 </div>
                 <div class="row">
-                    <p>Cargo: <strong id="rol"><?php echo $user->getRol();  ?></strong></p>
+                    <p class="col-4" id="camp-title">campaña: </p>
+                    <h4 class="col-4">Cargo: <strong id="rol"><?php echo $user->getRol();  ?></strong></h4>
+                    <p class="col-4" id="turn-title">turno: </p>
                 </div>
             </div>
         </div>

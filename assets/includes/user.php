@@ -23,12 +23,22 @@ class User extends DB{
 
     public function setUser($user){
         $userMinun = strtolower($user);
-        $query = $this->connect()->prepare('SELECT * FROM users WHERE user_name = :user');
-        $query->execute(['user' => $userMinun]);
+        $queryOne = $this->connect()->prepare('SELECT * FROM users WHERE user_name = :user');
+        $queryOne->execute(['user' => $userMinun]);
 
-        foreach ($query as $currentUser) {
+        foreach ($queryOne as $currentUser) {
             $this->rol = $currentUser['rol_user'];
-            $this->username = $currentUser['user_name'];
+        }
+
+        $queryTwo = $this->connect()->prepare('SELECT * FROM supervisores WHERE user_name = :user');
+        $queryTwo->execute(['user' => $userMinun]);
+
+        if($queryTwo->rowCount()){
+            foreach ($queryTwo as $currentUser) {
+                $this->username = $currentUser['name'];
+            }
+        }else{
+            $this->username = $userMinun;
         }
     }
 

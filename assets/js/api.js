@@ -2,6 +2,7 @@
 let rolApi
 let supApi
 let usersApi
+let asesorApi
 
 fetch(urlRol)
 .then(r=>r.json())
@@ -24,5 +25,13 @@ fetch(urlUsers)
 .then(r=>{
 
     usersApi = r.items
+
+})
+
+fetch(urlAsesor)
+.then(r=>r.json())
+.then(r=>{
+
+    asesorApi = r.items
 
 })

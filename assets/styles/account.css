@@ -16,11 +16,26 @@
     background: #202530;
 }
 
+.asesor-list{
+    margin: 0;
+    background: #fff;
+}
+
 .list-group-item{
     margin: 1rem 0;
     border-radius: inherit;
 }
 
+.asesor-item{
+    box-shadow: 0px 0px 10px 10px rgba(0,0,0,0.15);
+  -webkit-box-shadow: 0px 0px 10px 10px rgba(0,0,0,0.15);
+  -moz-box-shadow: 0px 0px 10px 10px rgba(0,0,0,0.15);
+}
+
 .error{
     border: .15rem solid red !important;
+}
+
+.check-container{
+    padding-top: 1rem;
 }

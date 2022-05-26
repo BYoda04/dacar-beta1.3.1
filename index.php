@@ -21,7 +21,11 @@ if(isset($_SESSION['user'])){
                 include_once 'assets/pages/home.php';
             }
         } else if ($section == 2) {
-            include_once 'assets/pages/data.php';
+            if ($user->getRol() == 1) {
+                include_once 'assets/pages/data.php';
+            } else {
+                include_once 'assets/pages/data-sup.php';
+            }
         } elseif ($section == 1) {
             include_once 'assets/pages/home.php';
         }

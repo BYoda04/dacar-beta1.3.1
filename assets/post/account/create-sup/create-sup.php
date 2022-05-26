@@ -16,6 +16,9 @@ include_once 'validate.php';
 $validate = new User(); 
 
 $userName = $_POST['username'];
+$name = $_POST['name'];
+$paternoName = $_POST['paternoName'];
+$maternoName = $_POST['maternoName'];
 $pass = $_POST['password'];
 $camp = $_POST['camp'];
 $turn = $_POST['turn'];
@@ -35,7 +38,11 @@ if(($_POST['username'] !== "") && ($_POST['password'] !== "")){
             $campCod = $validate->getCamp();
             $turnCod = $validate->getTurn();
 
-            $sql = "INSERT INTO `supervisores`(`supervisor_name`, `user_cod`, `camp_cod`, `turn_cod`, `asesores`) VALUES ('$userMinun','$id','$campCod','$turnCod','0')";
+            $nameMinun = strtolower($name);
+            $paternoMinun = strtolower($paternoName);
+            $maternoMinun = strtolower($maternoName);
+
+            $sql = "INSERT INTO `supervisores`(`user_name`, `name`, `paterno`, `materno`, `user_cod`, `camp_cod`, `turn_cod`, `asesores`) VALUES ('$userMinun','$nameMinun','$paternoMinun','$maternoMinun','$id','$campCod','$turnCod','0')";
             $query = mysqli_query($conexion,$sql);
             if ($query) {
                 echo "enviado";
