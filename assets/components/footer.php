@@ -9,6 +9,8 @@
 
     <!--CONST-->
     <script src="./assets/js/const.js"></script>
+    <!--CONST TWO-->
+    <script src="./assets/js/const-two.js"></script>
     <!--URL GET-->
     <script src="./assets/js/url-get.js"></script>
     <!--URL POST-->
@@ -25,6 +27,10 @@
     <script src="./assets/js/options.js"></script>
     <!--TITLE-->
     <script src="./assets/js/title.js"></script>
+    <!--HOME-->
+    <script src="./assets/js/home.js"></script>
+    <!--HOME SUP-->
+    <script src="./assets/js/home-sup.js"></script>
     <!--UPDATE PASSWORD-->
     <script src="./assets/js/update-password.js"></script>
     <!--CREATE SUP-->
@@ -37,6 +43,10 @@
     <script src="./assets/js/delete-asesor.js"></script>
     <!--SUP LIST-->
     <script src="./assets/js/sup-list.js"></script>
+    <!--INPUT DATA SUP-->
+    <script src="./assets/js/input-data.js"></script>
+    <!--INPUT UPDATE SUP-->
+    <script src="./assets/js/update-data.js"></script>
     <!--PROOB-->
     <script src="./assets/js/proob.js"></script>
 

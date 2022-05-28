@@ -21,14 +21,6 @@ $state = $_POST['state'];
 $arraySup = explode(" ", $sup);
 $arrayAsesor = explode(" ",$asesor);
 
-echo $arraySup[0];
-echo $arraySup[1];
-echo $arraySup[2];
-echo $arrayAsesor[0];
-echo $arrayAsesor[1];
-echo $arrayAsesor[2];
-echo $state;
-
 if ($validate->searchSup($arraySup[0],$arraySup[1],$arraySup[2])) {
     $validate->setID($arraySup[0],$arraySup[1],$arraySup[2]);
     $validate->setState($state);

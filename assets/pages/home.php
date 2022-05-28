@@ -4,34 +4,32 @@
     <section class="home">
         <div class="container-fluid justify-content-center align-items-center title">
             <div class="col justify-content-center align-items-center">
-                <div class="row">
+                <div class="row justify-content-center align-items-center">
                     <h2 id="name"><?php echo $user->getUserName();  ?></h2>
                 </div>
-                <div class="row">
-                    <p class="col-4" id="camp-title">campaña: </p>
-                    <h4 class="col-4">Cargo: <strong id="rol"><?php echo $user->getRol();  ?></strong></h4>
-                    <p class="col-4" id="turn-title">turno: </p>
+                <div class="row justify-content-center align-items-center">
+                    <h4 class="col">Cargo: <strong id="rol"><?php echo $user->getRol();  ?></strong></h4>
                 </div>
             </div>
         </div>
 
         <form class="row g-3 search-section">
             <div class="col-sm-3 asesor">
-                <label for="supervisores" class="visually">Supervisor: </label>
-                <select class="form-select" aria-label="Default select example" id="supervisores">
+                <label for="supervisores-admin" class="visually">Supervisor: </label>
+                <select class="form-select" aria-label="Default select example" id="supervisores-admin">
                     <option>supervisores</option>
                 </select>
             </div>
             <div class="col-sm-3 asesor">
-                <label for="asesores" class="visually">Asesor: </label>
+                <label for="asesores-admin" class="visually">Asesor: </label>
                 <div class="row">
                     <div class="col">
-                        <select class="form-select" aria-label="Default select example" id="asesores">
+                        <select class="form-select" id="asesores-admin">
                             <option>asesores</option>
                         </select>
                     </div>
                     <div class="col-1">
-                        <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                        <input type="checkbox" class="form-check-input" id="check-admin">
                     </div>
                     <div class="col-1"></div>
                 </div>

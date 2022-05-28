@@ -44,25 +44,47 @@ const agreeAsesor = (id)=>{
 
 
 const camp = (id)=>{
-    if (id === 1) {
-        return "Hogar"
-    } else {
-        return "Movil"
+    for (let i = 0; i < campAPi.length; i++) {
+        if (id === campAPi[i].id_camp) {
+            return campAPi[i].name_camp
+        }
     }
 }
 
 const turn = (id)=>{
-    if (id === 1) {
-        return "Mañana"
-    } else {
-        return "Tarde"
+    for (let i = 0; i < turnApi.length; i++) {
+        if (id === turnApi[i].id_turn) {
+            return turnApi[i].name_turn
+        }
     }
 }
 
 const activo = (id)=>{
-    if (id === 1) {
-        return "activo"
-    } else {
-        return "cese"
+    for (let i = 0; i < activoApi.length; i++) {
+        if (id === activoApi[i].id_state) {
+            return activoApi[i].name_state
+        }
+    }
+}
+
+const getId = (nom)=>{
+    let arrayNom = nom.split(" ")
+    let apellidoP = arrayNom[1].toLowerCase()
+    let apellidoM = arrayNom[2].toLowerCase()
+    for (let i = 0; i < supApi.length; i++) {
+        if ((apellidoP === supApi[i].apellido_paterno)&&(apellidoM === supApi[i].apellido_materno)) {
+            return supApi[i].id_supervisor
+        }
+    }
+}
+
+const getIdAsesor = (nom)=>{
+    let arrayNom = nom.split(" ")
+    let apellidoP = arrayNom[1].toLowerCase()
+    let apellidoM = arrayNom[2].toLowerCase()
+    for (let i = 0; i < asesorApi.length; i++) {
+        if ((apellidoP === asesorApi[i].paterno)&&(apellidoM === asesorApi[i].materno)) {
+            return asesorApi[i].id_asesor
+        }
     }
 }

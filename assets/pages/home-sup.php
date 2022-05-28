@@ -18,21 +18,27 @@
 
         <form class="row g-3 search-section">
             <div class="col-sm-3 asesor">
-                <div class="col">
-                    <label for="staticEmail2" class="visually">Asesor: </label>
-                    <select class="form-select" aria-label="Default select example" id="asesores">
-                        <option>Open this select menu</option>
-                    </select>
+                <label for="asesores-sup" class="visually">Asesor: </label>
+                <div class="row">
+                    <div class="col">
+                        <select class="form-select" id="asesores-sup">
+                            
+                        </select>
+                    </div>
+                    <div class="col-1">
+                        <input type="checkbox" class="form-check-input" id="check-sup">
+                    </div>
+                    <div class="col-1"></div>
                 </div>
             </div>
             <div class="col row">
                 <div class="col-6">
                     <label for="exampleFormControlInput1" class="form-label">Fecha Inicio</label>
-                    <input type="date" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+                    <input type="date" class="form-control" id="date-start-sup">
                 </div>
                 <div class="col-6">
                     <label for="exampleFormControlInput1" class="form-label">Fecha Final</label>
-                    <input type="date" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+                    <input type="date" class="form-control" id="date-end-sup">
                 </div>
             </div>
             <div class="col-sm-2">
@@ -44,7 +50,7 @@
             <div class="col-sm-6 card-container">
                 <div class="card">
                     <div class="box">
-                        <div class="percent" id="measurer">
+                        <div class="percent" id="measurer-sup">
                             <svg>
                                 <circle cx="70" cy="70" r="70"></circle>
                                 <circle cx="70" cy="70" r="70" style="--i:0;"></circle>
@@ -60,11 +66,11 @@
             <div class="col-sm-6">
                 <p>Datos de venta</p>
                 <div>
-                    <h3 id="data-venta">0</h3>
+                    <h3 id="data-venta-sup">0</h3>
                     <p>Venta</p>
                 </div>
                 <div>
-                    <h3 id="data-meta">0</h3>
+                    <h3 id="data-meta-sup">0</h3>
                     <p>Meta</p>
                 </div>
             </div>

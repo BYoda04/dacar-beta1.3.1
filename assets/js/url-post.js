@@ -3,3 +3,5 @@ let urlCreateSup = "http://localhost/dacartelecom-beta1.3.1/assets/post/account/
 let urlCreateAsesor ="http://localhost/dacartelecom-beta1.3.1/assets/post/account/create-asesor/create-asesor.php"
 let urlDeleteSup = "http://localhost/dacartelecom-beta1.3.1/assets/post/account/delete-sup/delete-sup.php"
 let urlDeleteAsesor = "http://localhost/dacartelecom-beta1.3.1/assets/post/account/delete-asesor/delete-asesor.php"
+let urlSendDataSup = "http://localhost/dacartelecom-beta1.3.1/assets/post/data/sup/sup-data.php"
+let urlSendDataAdmin = "http://localhost/dacartelecom-beta1.3.1/assets/post/data/admin/admin-data.php"

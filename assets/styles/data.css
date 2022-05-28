@@ -1,8 +1,25 @@
 
+.row h3{
+    color: #fff;
+    margin-bottom: 2rem;
+    margin-top: 1rem;
+}
+
 .asesores-container{
     padding: 1rem;
 }
 
 .asesores-items{
     margin: 1rem;
+}
+
+.sup-input-items{
+    margin: 1rem;
+    padding: .5rem;
+    background: #fff;
+    border-radius: .5rem;
+}
+
+#input-sup-container{
+    padding: 2rem;
 }

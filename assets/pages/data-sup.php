@@ -17,7 +17,20 @@
         </div>
 
         <div class="container-fluid justify-content-center align-items-center">
-
+            <div class="row">
+                <h3 id="default-time">----/--/--</h3>
+            </div>
+            <form action="" class="row justify-content-center align-items-center asesores-container" id="save-default">
+                <div class="col-3"></div>
+                <div class="col-3">
+                    <input type="date" style="display: none;" id="default-time-input">
+                    <input type="number" class="form-control" value="0" id="goal">
+                </div>
+                <div class="col-2">
+                    <button class="btn btn-primary" type="submit">Guardar</button>
+                </div>
+                <div class="col-4"></div>
+            </form>
         </div>
     
         <div class="row justify-content-center align-items-center asesores-container">
@@ -28,35 +41,13 @@
                             <h2 class="accordion-header" id="headingOne">
                                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">Cargando ...</button>
                             </h2>
-                            <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
-                                <div class="accordion-body container-asesor-list">
-                                <form>
-                                    <div class="mb-3">
-                                        <div class="row">
-                                            <div class="col-8">
-                                                <label for="planOne" class="form-label">cargando ...</label>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="mb-3">
-                                        <div class="row">
-                                            <div class="col-8">
-                                                <label for="planTwo" class="form-label">cargando ...</label>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="mb-3">
-                                        <div class="row">
-                                            <div class="col-8">
-                                                <label for="planTrhee" class="form-label">cargando ...</label>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </form>
-                                </div>
-                            </div>
                         </div>
                     </div>
+                </div>
+            </div>
+            <div class="row justify-content-center align-items-center asesores-container">
+                <div class="col-4">
+                    <button class="btn btn-success" id="send-input-data">Enviar</button>
                 </div>
             </div>
         </div>

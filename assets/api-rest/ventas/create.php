@@ -17,12 +17,15 @@
                 while ($row = $res->fetch(PDO::FETCH_ASSOC)) {
                     $item = array(
                         'id_venta' => $row['id_venta'],
-                        'cantidad' => $row['cantidad'],
+                        'product_one' => $row['product_one'],
+                        'product_two' => $row['product_two'],
+                        'product_trhee' => $row['product_trhee'],
                         'date' => $row['date'],
                         'sup_cod' => $row['sup_cod'],
                         'asesor_cod' => $row['asesor_cod'],
                         'camp_cod' => $row['camp_cod'],
                         'turn_cod' => $row['turn_cod'],
+                        'total' => $row['total'],
                         'meta' => $row['meta'],
                         'ugi' => $row['ugi']
                     );

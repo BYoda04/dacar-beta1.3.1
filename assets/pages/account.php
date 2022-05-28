@@ -79,12 +79,7 @@
                                         <label for="apellidoMaterno" class="form-label">Apellido Materno</label>
                                         <input type="text" class="form-control" id="apellidoMaterno" name="maternoName">
                                     </div>
-                                    <div class="mb-3">
-                                        <label for="supAsesor" class="visually">Supervisor a Cargo: </label>
-                                        <select class="form-select" id="supAsesor" name="sup">
-                                            
-                                        </select>
-                                    </div>   
+                                    <input type="text" id="supAsesor" name="sup" style="display: none;">  
                             </div>
                             <div class="modal-footer">
                                 <button type="submit" class="btn btn-primary">Agregar Asesor</button>
@@ -103,10 +98,8 @@
                         </div>
                         <form action="" method="POST" id="delete-sup">
                             <div class="modal-body">
-                                <h3>¿Que supervisor desea eliminar?</h3>
-                                <select class="form-select" name="sup" id="list-delete-sup">
-                                                
-                                </select>
+                                <h3 id="name-sup-delete"></h3>
+                                <input type="text" name="sup" id="input-sup" style="display: none;">
                                 <h3>¿A que supervisor pasaran los asesores?</h3>
                                 <select class="form-select" name="new-sup" id="list-update-sup">
                                                 
@@ -124,19 +117,13 @@
                 <div class="modal-dialog">
                     <div class="modal-content">
                         <div class="modal-header">
-                            <h5 class="modal-title" id="exampleModalLabel">Cambiar estado de los Asesores</h5>
+                            <h5 class="modal-title" id="exampleModalLabel">¿Desea cambiar el estado del asesor?</h5>
                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
                         <form action="" method="POST" id="update-state">
                             <div class="modal-body">
-                                <h3>¿Quien es el supervisor del asesor?</h3>
-                                <select class="form-select" name="sup" id="sup-search">
-                                                
-                                </select>
-                                <button type="button" class="btn btn-primary" id="search-asesor">Buscar asesores</button>
-                                <select class="form-select" name="asesor" id="delete-asesor-container">
-                                                
-                                </select>
+                                <input type="text" name="sup" id="sup-search" style="display: none;">
+                                <input type="text" name="asesor" id="delete-asesor-container" style="display: none;">
                                 <div class="row check-container">
                                     <div class="col-5">
                                         <input type="radio" class="form-check-input" id="active" name="state" value="activo">
@@ -157,9 +144,6 @@
                 </div>
             </div>
             <button class="btn btn-success" data-bs-toggle="modal" href="#exampleModalToggle" role="button">Crear Supervisor</button>
-            <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Eliminar Supervisor</button>
-            <button class="btn btn-info" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal">Agregar Asesor</button>
-            <button type="button" class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#exampleModal">Estado de Asesor</button>
         </div>
 
         <ul class="list-group col-10" id="sup-list">

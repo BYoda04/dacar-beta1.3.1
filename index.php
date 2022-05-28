@@ -30,7 +30,11 @@ if(isset($_SESSION['user'])){
             include_once 'assets/pages/home.php';
         }
     } else {
-        include_once 'assets/pages/home.php';
+        if ($user->getRol() == 1) {
+            include_once 'assets/pages/home.php';
+        } else {
+            include_once 'assets/pages/home-sup.php';
+        }
     }
     /* header("location:./index-graphics.php"); */
 }else if(isset($_POST['username']) && isset($_POST['password'])){
@@ -44,10 +48,10 @@ if(isset($_SESSION['user'])){
         $userSession->setCurrentUser($userForm);
         $user->setUser($userForm);
 
-        if ($user->getRol() > 1) {
-            include_once 'assets/pages/home-sup.php';
-        } else {
+        if ($user->getRol() == 1) {
             include_once 'assets/pages/home.php';
+        } else {
+            include_once 'assets/pages/home-sup.php';
         }
         
         /* header("location:./index-graphics.php"); */

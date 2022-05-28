@@ -1,5 +1,5 @@
 
 
-setTimeout(() => {
-    console.log(productApi);
-}, 900);
+
+console.log(circle)
+console.log(percent)

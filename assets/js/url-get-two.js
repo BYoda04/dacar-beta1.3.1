@@ -2,3 +2,4 @@ let urlCamp = "http://localhost/dacartelecom-beta1.3.1/assets/api-rest/campanias
 let urlTurn = "http://localhost/dacartelecom-beta1.3.1/assets/api-rest/turno/index.php"
 let urlActivo = "http://localhost/dacartelecom-beta1.3.1/assets/api-rest/activo/index.php"
 let urlProduct = "http://localhost/dacartelecom-beta1.3.1/assets/api-rest/product/index.php"
+let urlVentas = "http://localhost/dacartelecom-beta1.3.1/assets/api-rest/ventas/index.php"
