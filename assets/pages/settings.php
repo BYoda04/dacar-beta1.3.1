@@ -11,7 +11,7 @@
                 </div>
             </div>
             <form class="col-8 needs-validation" action="" method="POST" id="change-password" novalidate>
-                <input type="text" class="form-control" aria-describedby="emailHelp" style="display: none;" value="<?php echo $user->getUserName();  ?>" name="userName">
+                <input type="text" class="form-control" style="display: none;" value="@<?php echo $user->getUserName();  ?>" name="userName">
                 <div class="mb-3">
                     <label for="lastPassword" class="form-label">Contraseña Actual</label>
                     <input type="password" class="form-control" id="lastPassword" name="lastPassword" required>

@@ -13,11 +13,11 @@
             </div>
         </div>
 
-        <form class="row g-3 search-section">
+        <form class="row g-3 search-section" id="search-graphic-admin">
             <div class="col-sm-3 asesor">
                 <label for="supervisores-admin" class="visually">Supervisor: </label>
                 <select class="form-select" aria-label="Default select example" id="supervisores-admin">
-                    <option>supervisores</option>
+                    
                 </select>
             </div>
             <div class="col-sm-3 asesor">
@@ -25,7 +25,7 @@
                 <div class="row">
                     <div class="col">
                         <select class="form-select" id="asesores-admin">
-                            <option>asesores</option>
+
                         </select>
                     </div>
                     <div class="col-1">
@@ -37,26 +37,26 @@
             <div class="col row">
                 <div class="col-6">
                     <label for="exampleFormControlInput1" class="form-label">Fecha Inicio</label>
-                    <input type="date" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+                    <input type="date" class="form-control" id="date-start-admin" placeholder="name@example.com">
                 </div>
                 <div class="col-6">
                     <label for="exampleFormControlInput1" class="form-label">Fecha Final</label>
-                    <input type="date" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+                    <input type="date" class="form-control" id="date-end-admin" placeholder="name@example.com">
                 </div>
             </div>
             <div class="col-sm-2">
-                <button type="button" class="btn btn-primary mb-3">Buscar</button>
+                <button class="btn btn-primary mb-3">Buscar</button>
             </div>
         </form>
 
         <div class="row measurer">
-            <div class="col-sm-6 card-container">
+            <div class="col-sm-6 card-container align-self-start">
                 <div class="card">
                     <div class="box">
-                        <div class="percent" id="measurer">
+                        <div class="percent" id="measurer-admin">
                             <svg>
-                                <circle cx="70" cy="70" r="70"></circle>
-                                <circle cx="70" cy="70" r="70" style="--i:0;"></circle>
+                                <circle cx="108" cy="108" r="108"></circle>
+                                <circle cx="108" cy="108" r="108" style="--i:0;"></circle>
                             </svg>
                             <div class="number">
                                 <h2>0<span>%</span></h2>
@@ -67,15 +67,23 @@
                 </div>
             </div>
             <div class="col-sm-6">
-                <p>Datos de venta</p>
-                <div>
-                    <h3 id="data-venta">0</h3>
-                    <p>Venta</p>
+                <div class="row border border-white border-start-0 rounded-end">
+                    <h3>Datos de Venta General</h3>
                 </div>
-                <div>
-                    <h3 id="data-meta">0</h3>
-                    <p>Meta</p>
+                <div class="row border-bottom border-white">
+                    <div class="col-6">
+                        <h3 id="data-venta-admin">0</h3>
+                        <p>Venta Total</p>
+                    </div>
+                    <div class="col-6">
+                        <h3 id="data-meta-admin">0</h3>
+                        <p>Meta</p>
+                    </div>
                 </div>
+                <div class="row border-bottom border-white">
+                    <h3>Datos de Venta por Asesor</h3>
+                </div>
+                <div id="data-generalsup"></div>
             </div>
         </div>
     

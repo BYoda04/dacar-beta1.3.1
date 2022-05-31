@@ -16,7 +16,7 @@
             </div>
         </div>
 
-        <form class="row g-3 search-section">
+        <form class="row g-3 search-section" id="search-graphic-sup">
             <div class="col-sm-3 asesor">
                 <label for="asesores-sup" class="visually">Asesor: </label>
                 <div class="row">
@@ -42,18 +42,18 @@
                 </div>
             </div>
             <div class="col-sm-2">
-                <button type="button" class="btn btn-primary mb-3">Buscar</button>
+                <button class="btn btn-primary mb-3">Buscar</button>
             </div>
         </form>
 
         <div class="row measurer">
-            <div class="col-sm-6 card-container">
+            <div class="col-sm-6 card-container align-self-start">
                 <div class="card">
                     <div class="box">
                         <div class="percent" id="measurer-sup">
                             <svg>
-                                <circle cx="70" cy="70" r="70"></circle>
-                                <circle cx="70" cy="70" r="70" style="--i:0;"></circle>
+                                <circle cx="108" cy="108" r="108"></circle>
+                                <circle cx="108" cy="108" r="108" style="--i:0;"></circle>
                             </svg>
                             <div class="number">
                                 <h2>0<span>%</span></h2>
@@ -64,15 +64,23 @@
                 </div>
             </div>
             <div class="col-sm-6">
-                <p>Datos de venta</p>
-                <div>
-                    <h3 id="data-venta-sup">0</h3>
-                    <p>Venta</p>
+                <div class="row border border-white border-start-0 rounded-end">
+                    <h3>Datos de Venta General</h3>
                 </div>
-                <div>
-                    <h3 id="data-meta-sup">0</h3>
-                    <p>Meta</p>
+                <div class="row border-bottom border-white">
+                    <div class="col-6">
+                        <h3 id="data-venta-sup">0</h3>
+                        <p>Venta Total</p>
+                    </div>
+                    <div class="col-6">
+                        <h3 id="data-meta-sup">0</h3>
+                        <p>Meta</p>
+                    </div>
                 </div>
+                <div class="row border-bottom border-white">
+                    <h3>Datos de Venta por Asesor</h3>
+                </div>
+                <div id="data-generalsup"></div>
             </div>
         </div>
     

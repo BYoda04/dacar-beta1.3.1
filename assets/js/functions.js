@@ -67,6 +67,16 @@ const activo = (id)=>{
     }
 }
 
+const product = (id)=>{
+    let arrayProducts = []
+    for (let i = 0; i < productApi.length; i++) {
+        if (productApi[i].camp_cod === id) {
+            arrayProducts.push(productApi[i].product_name)
+        }
+    }
+    return arrayProducts
+}
+
 const getId = (nom)=>{
     let arrayNom = nom.split(" ")
     let apellidoP = arrayNom[1].toLowerCase()
@@ -86,5 +96,105 @@ const getIdAsesor = (nom)=>{
         if ((apellidoP === asesorApi[i].paterno)&&(apellidoM === asesorApi[i].materno)) {
             return asesorApi[i].id_asesor
         }
+    }
+}
+
+const getDay = (day) =>{
+    let arrayDay = day.split("-")
+    let numDay = parseInt(arrayDay[2])
+    return numDay
+}
+
+const getMonth = (month) =>{
+    let arrayMonth = month.split("-")
+    let numMonth = parseInt(arrayMonth[1])
+    return numMonth
+}
+
+const getMeta = (meta,add) =>{
+    let preview = parseInt(meta) - (parseInt(meta) - parseInt(add))
+    if (parseInt(meta) !== 0) {
+        if (parseInt(meta)>parseInt(add)) {
+            return preview
+        } else {
+            return meta
+        }
+    } else {
+        return meta
+    }
+}
+
+const listAseores = (id)=>{
+    asesoresAdmin.innerHTML = ""
+    for (let i = 0; i < asesorApi.length; i++) {
+        if ((parseInt(asesorApi[i].sup_cod) === parseInt(id))&&(parseInt(asesorApi[i].state) !== 2)) {
+            asesoresAdmin.innerHTML += `<option>${(asesorApi[i].asesor_name).toUpperCase()} ${(asesorApi[i].paterno).toUpperCase()} ${(asesorApi[i].materno).toUpperCase()}</option>`
+        }
+    }
+}
+
+const getCamp = (nom)=>{
+    for (let i = 0; i < supApi.length; i++) {
+        if (nom === supApi[i].name) {
+            return supApi[i].camp_cod
+        } else if (nom === supApi[i].id_supervisor) {
+            return supApi[i].camp_cod
+        }
+    }
+}
+
+const getNameAsesor = (id)=>{
+    for (let i = 0; i < asesorApi.length; i++) {
+        if (asesorApi[i].id_asesor === id) {
+            return asesorApi[i].asesor_name
+        }
+    }
+}
+
+const table = (id,asesorNom,listProduct,plan,ugi)=>{
+    if (id !==2) {
+        dataGeneralSup.innerHTML += `<div class="border border-white p-2 mb-2 rounded" name="info-sold">
+            <div class="row border-bottom border-white">
+                <h4>${asesorNom}</h4>
+            </div>
+            <div class="row">
+                <div class="col-3 border border-white">
+                    <p>${listProduct[0]}</p>
+                    <p name="sold">${plan[0]}</p>
+                </div>
+                <div class="col-3 border border-white">
+                    <p>${listProduct[1]}</p>
+                    <p name="sold">${plan[1]}</p>
+                </div>
+                <div class="col-3 border border-white">
+                    <p>${listProduct[2]}</p>
+                    <p name="sold">${plan[2]}</p>
+                </div>
+                <div class="col-3 border border-white">
+                    <p>UGI</p>
+                    <p>${plan[3]}</p>
+                </div>
+            </div>
+        </div>`
+    } else {
+        dataGeneralSup.innerHTML += `<div class="border border-white p-2 mb-2 rounded" name="info-sold">
+            <div class="row border-bottom border-white">
+                <h4>${asesorNom}</h4>
+            </div>
+            <div class="row">
+                <div class="col-4 border border-white" name="sold">
+                    <p>${listProduct[0]}</p>
+                    <p name="sold">${plan[0]}</p>
+                </div>
+                <div class="col-4 border border-white" name="sold">
+                    <p>${listProduct[1]}</p>
+                    <p name="sold">${plan[1]}</p>
+                </div>
+                <div class="col-4 border border-white" name="sold">
+                    <p>${listProduct[2]}</p>
+                    <p name="sold">${plan[2]}</p>
+                </div>
+            </div>
+        </div>`
     }
 }

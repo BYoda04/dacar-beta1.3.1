@@ -11,6 +11,8 @@
     <script src="./assets/js/const.js"></script>
     <!--CONST TWO-->
     <script src="./assets/js/const-two.js"></script>
+    <!--CONST TRHEE-->
+    <script src="./assets/js/const-trhee.js"></script>
     <!--URL GET-->
     <script src="./assets/js/url-get.js"></script>
     <!--URL POST-->
