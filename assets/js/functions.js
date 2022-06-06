@@ -151,7 +151,7 @@ const getNameAsesor = (id)=>{
     }
 }
 
-const table = (id,asesorNom,listProduct,plan,ugi)=>{
+const table = (id,asesorNom,listProduct,plan)=>{
     if (id !==2) {
         dataGeneralSup.innerHTML += `<div class="border border-white p-2 mb-2 rounded" name="info-sold">
             <div class="row border-bottom border-white">
@@ -196,5 +196,76 @@ const table = (id,asesorNom,listProduct,plan,ugi)=>{
                 </div>
             </div>
         </div>`
+    }
+}
+
+const timeDefault = ()=>{
+    
+    let time = new Date()
+    let hour = time.getHours()
+    let minuts = time.getMinutes()
+    let seconds = time.getSeconds()
+    let hourInput
+    let hourActual
+    let minutsActual
+    let secondsActual
+
+    if (hour > 12) {
+        if (hour-12 < 10) {
+            hourActual = "0"+(hour -12)
+        } else {
+            hourActual = hour -12
+        }
+    } else {
+        if (hour < 10) {
+            hourActual = "0"+hour
+        } else {
+            hourActual = hour
+        }
+    }
+
+    if (hour < 10) {
+        hourInput = "0"+(hour)
+    } else {
+        hourInput = (hour)
+    }
+
+    if (minuts < 10) {
+        minutsActual = "0"+minuts
+    } else {
+        minutsActual = minuts
+    }
+
+    if (seconds < 10) {
+        secondsActual = "0"+seconds
+    } else {
+        secondsActual = seconds
+    }
+
+    defaultHour.innerText = `${hourActual} : ${minutsActual} : ${secondsActual}`
+    defaultHourInput.value = `${hourInput}:00:00`
+}
+
+const timeUpdate = ()=>{
+
+    let time = new Date()
+    let hour = time.getHours()
+    let hourInput
+
+    if (hour < 10) {
+        hourInput = "0"+hour
+    } else {
+        hourInput = hour
+    }
+
+    hourUpdate.value = `${hourInput}:00:00`
+}
+
+const hourValidate = (hour)=>{
+    let array = hour.split(":")
+    if (array.length<3) {
+        return hour+":00"
+    } else {
+        return hour
     }
 }

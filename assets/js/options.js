@@ -114,6 +114,7 @@ setTimeout(() => {
                                 <div class="accordion-body container-asesor-list">
                                 <form name="forms-data">
                                     <input type="date" class="form-control" style="display: none;" name="date">
+                                    <input type="time" class="form-control" style="display: none;" name="hour">
                                     <input type="number" class="form-control" style="display: none;" name="goal" value="0">
                                     <input type="number" class="form-control" value="${asesorApi[e].id_asesor}" style="display: none;" name="asesorID">
                                     <input type="number" class="form-control" value="${supApi[i].id_supervisor}" style="display: none;" name="supID">

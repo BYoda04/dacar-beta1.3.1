@@ -47,8 +47,10 @@
     <script src="./assets/js/sup-list.js"></script>
     <!--INPUT DATA SUP-->
     <script src="./assets/js/input-data.js"></script>
-    <!--INPUT UPDATE SUP-->
+    <!--INPUT UPDATE DATA-->
     <script src="./assets/js/update-data.js"></script>
+    <!--VIEWER-->
+    <script src="./assets/js/viewer.js"></script>
     <!--PROOB-->
     <script src="./assets/js/proob.js"></script>
 

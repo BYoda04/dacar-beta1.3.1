@@ -20,10 +20,14 @@
             <div class="row">
                 <h3 id="default-time">----/--/--</h3>
             </div>
+            <div class="row">
+                <h3 id="default-hour">--:--:--</h3>
+            </div>
             <form action="" class="row justify-content-center align-items-center asesores-container" id="save-default">
                 <div class="col-3"></div>
                 <div class="col-3">
                     <input type="date" style="display: none;" id="default-time-input">
+                    <input type="time" style="display: none;" id="default-hour-input">
                     <input type="number" class="form-control" value="0" id="goal">
                 </div>
                 <div class="col-2">

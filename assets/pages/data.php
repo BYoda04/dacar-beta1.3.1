@@ -42,6 +42,16 @@
                                 <div class="mb-3">
                                     <div class="row">
                                         <div class="col-6">
+                                            <label for="date-update-data" class="form-label">hora</label>
+                                        </div>
+                                        <div class="col-6">
+                                            <input type="time" class="form-control" name="hour" id="hour-update-data">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="mb-3">
+                                    <div class="row">
+                                        <div class="col-6">
                                             <label for="plan-one-update" class="form-label">plan 1</label>
                                         </div>
                                         <div class="col-6">

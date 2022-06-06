@@ -36,8 +36,10 @@ if(isset($_SESSION['user'])){
     } else {
         if ($user->getRol() == 1) {
             include_once 'assets/pages/home.php';
-        } else {
+        } else if ($user->getRol() == 2) {
             include_once 'assets/pages/home-sup.php';
+        } else {
+            include_once 'assets/pages/view.php';
         }
     }
     /* header("location:./index-graphics.php"); */
@@ -54,8 +56,10 @@ if(isset($_SESSION['user'])){
 
         if ($user->getRol() == 1) {
             include_once 'assets/pages/home.php';
-        } else {
+        } else if ($user->getRol() == 2) {
             include_once 'assets/pages/home-sup.php';
+        } else {
+            include_once 'assets/pages/view.php';
         }
         
         /* header("location:./index-graphics.php"); */

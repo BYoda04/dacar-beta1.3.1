@@ -17,21 +17,22 @@ setTimeout(() => {
             for (let a = 0; a < list.length; a++) {
                 list[a].addEventListener("click",e=>{
                     e.preventDefault()
+                    timeUpdate()
                     
                     let idA = getIdAsesor(asesorItem[a].innerText)
                     asesorUpdate.value = idA
                     asesorNameOption.innerText = "Actualizar datos de"
                     asesorNameOption.innerText += ` ${asesorItem[a].innerText}`
-                    planOneUpdate.value = ""
-                    planTwoUpdate.value = ""
-                    planTrheeUpdate.value = ""
-                    metaUpdate.value = ""
-                    for (let c = 0; c < ventasApi.length; c++) {
-                        if ((ventasApi[c].asesor_cod === parseInt(asesorUpdate.value)) && (ventasApi[c].date === dateUpdate.value)) {
-                            planOneUpdate.value = ventasApi[c].product_one 
-                            planTwoUpdate.value = ventasApi[c].product_two
-                            planTrheeUpdate.value = ventasApi[c].product_trhee
-                            metaUpdate.value = ventasApi[c].meta
+                    planOneUpdate.value = 0
+                    planTwoUpdate.value = 0
+                    planTrheeUpdate.value = 0
+                    metaUpdate.value = 0
+                    for (let c = 0; c < ventasCampApi.length; c++) {
+                        if (((ventasCampApi[c].asesor_cod === parseInt(asesorUpdate.value)) && (ventasCampApi[c].date === dateUpdate.value))&&(ventasCampApi[c].hour === hourUpdate.value)) {
+                            planOneUpdate.value = ventasCampApi[c].product_one 
+                            planTwoUpdate.value = ventasCampApi[c].product_two
+                            planTrheeUpdate.value = ventasCampApi[c].product_trhee
+                            metaUpdate.value = ventasCampApi[c].meta
                         }
                     }
                 })
@@ -42,26 +43,53 @@ setTimeout(() => {
 }, 1000);
 
 dateUpdate.addEventListener("change",e=>{
-    planOneUpdate.value = ""
-    planTwoUpdate.value = ""
-    planTrheeUpdate.value = ""
-    for (let c = 0; c < ventasApi.length; c++) {
-        if ((ventasApi[c].asesor_cod === parseInt(asesorUpdate.value)) && (ventasApi[c].date === dateUpdate.value)) {
-            planOneUpdate.value = ventasApi[c].product_one 
-            planTwoUpdate.value = ventasApi[c].product_two
-            planTrheeUpdate.value = ventasApi[c].product_trhee
+    let hourValid = hourValidate(hourUpdate.value)
+    planOneUpdate.value = 0
+    planTwoUpdate.value = 0
+    planTrheeUpdate.value = 0
+    metaUpdate.value = 0
+    for (let c = 0; c < ventasCampApi.length; c++) {
+        if (((ventasCampApi[c].asesor_cod === parseInt(asesorUpdate.value)) && (ventasCampApi[c].date === dateUpdate.value))&&(ventasCampApi[c].hour === hourValid)) {
+            console.log("me ejecute");
+            planOneUpdate.value = ventasCampApi[c].product_one 
+            planTwoUpdate.value = ventasCampApi[c].product_two
+            planTrheeUpdate.value = ventasCampApi[c].product_trhee
+            metaUpdate.value = ventasCampApi[c].meta
         }
     }
 })
 
+hourUpdate.addEventListener("change",e=>{
+    let hourValid = hourValidate(hourUpdate.value)
+    planOneUpdate.value = 0
+    planTwoUpdate.value = 0
+    planTrheeUpdate.value = 0
+    metaUpdate.value = 0
+    for (let c = 0; c < ventasCampApi.length; c++) {
+        if (((ventasCampApi[c].asesor_cod === parseInt(asesorUpdate.value)) && (ventasCampApi[c].date === dateUpdate.value))&&(ventasCampApi[c].hour === hourValid)) {
+            planOneUpdate.value = ventasCampApi[c].product_one 
+            planTwoUpdate.value = ventasCampApi[c].product_two
+            planTrheeUpdate.value = ventasCampApi[c].product_trhee
+            metaUpdate.value = ventasCampApi[c].meta
+        }
+    }
+    hourUpdate.value = hourValid
+})
+
 updateDataSold.addEventListener("submit",e=>{
-    e.preventDefault()
-
-    let formulario = new FormData(updateDataSold)
-
-    fetch(urlSendDataAdmin,{
-        method: 'POST',
-        body: formulario
-    })
-    .then(r => r.json())
+    if (parseInt(metaUpdate.value) !== 0) {
+        e.preventDefault()
+        metaUpdate.classList.remove('error')
+    
+        let formulario = new FormData(updateDataSold)
+    
+        fetch(urlSendDataAdmin,{
+            method: 'POST',
+            body: formulario
+        })
+        .then(r => r.json())
+    } else {
+        e.preventDefault()
+        metaUpdate.classList.add('error')
+    }
 })

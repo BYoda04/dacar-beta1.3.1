@@ -4,6 +4,10 @@ setTimeout(() => {
     inputAsesor.innerHTML = optionsListAsesor
 }, 1000);
 
+setInterval(()=>{
+    timeDefault()
+}, 1000)
+
 saveDefault.addEventListener("submit",e=>{
     e.preventDefault()
     goal.disabled = true
@@ -15,7 +19,8 @@ sendData.addEventListener("click",e=>{
     for (let i = 0; i < formData.length; i++) {
         let formItem = formData[i]
         formItem[0].value = defaultTimeInput.value
-        formItem[1].value = goal.value
+        formItem[1].value = defaultHourInput.value
+        formItem[2].value = goal.value
         if ((parseInt(goal.value) !== 0) && (parseInt(formItem[1].value) !== 0)) {
             goal.classList.remove('error')
 
