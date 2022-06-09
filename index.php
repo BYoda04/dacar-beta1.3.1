@@ -29,8 +29,10 @@ if(isset($_SESSION['user'])){
         } elseif ($section == 1) {
             if ($user->getRol() == 1) {
                 include_once 'assets/pages/home.php';
-            } else {
+            } else if ($user->getRol() == 2)  {
                 include_once 'assets/pages/home-sup.php';
+            } else {
+                include_once 'assets/pages/view.php';
             }
         }
     } else {

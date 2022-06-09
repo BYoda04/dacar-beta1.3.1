@@ -23,6 +23,8 @@
     <script src="./assets/js/api.js"></script>
     <!--API TWO-->
     <script src="./assets/js/api-two.js"></script>
+    <!--API Trhee-->
+    <script src="./assets/js/api-trhee.js"></script>
     <!--FUNCTIONS-->
     <script src="./assets/js/functions.js"></script>
     <!--OPTIONS-->

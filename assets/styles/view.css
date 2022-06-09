@@ -6,4 +6,34 @@
     background: #fff;
     color: #111;
     text-align: center;
+    border-radius: 1rem;
+}
+
+.select-camp-view{
+    margin-top: 5rem !important;
+}
+
+.select-camp-view h2{
+    color: #fff;
+    font-weight: 700;
+}
+
+.select-camp-view button{
+    margin-top: 1rem !important;
+}
+
+@media (max-width: 767px) {
+    
+    .view-container{
+        display: flex;
+    }
+
+    .view-container thead{
+        width: 350px;
+    }
+
+    .view-body{
+        display: flex;
+    }
+
 }

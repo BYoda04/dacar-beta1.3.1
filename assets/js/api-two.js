@@ -2,8 +2,6 @@ let campAPi
 let turnApi
 let activoApi
 let productApi
-let ventasApi
-let ventasCampApi
 
 fetch(urlCamp)
 .then(r=>r.json())
@@ -34,21 +32,5 @@ fetch(urlProduct)
 .then(r=>{
 
     productApi = r.items
-
-})
-
-fetch(urlVentas)
-.then(r=>r.json())
-.then(r=>{
-
-    ventasApi = r.items
-
-})
-
-fetch(urlVentasCamp)
-.then(r=>r.json())
-.then(r=>{
-
-    ventasCampApi = r.items
 
 })

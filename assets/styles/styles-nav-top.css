@@ -15,3 +15,16 @@ section{
     border: 0 !important;
     background: #fff !important;
 }
+
+.proob{
+    width: 100vw;
+}
+
+.proob img{
+    width: 50vw;
+    width: 100%;
+}
+
+.logo button{
+    all: unset;
+}

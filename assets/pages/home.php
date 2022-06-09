@@ -49,8 +49,8 @@
             </div>
         </form>
 
-        <div class="row measurer">
-            <div class="col-sm-6 card-container align-self-start">
+        <div class="fila measurer">
+            <div class="card-container">
                 <div class="card">
                     <div class="box">
                         <div class="percent" id="measurer-admin">
@@ -65,25 +65,77 @@
                         <h2 class="text">Porcentaje</h2>
                     </div>
                 </div>
+                <div>
+                    <div class="row">
+                        <div class="col-6">
+                            <h3 id="data-venta-admin">0</h3>
+                            <p>Venta Total</p>
+                        </div>
+                        <div class="col-6">
+                            <h3 id="data-meta-admin">0</h3>
+                            <p>Meta</p>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="col-sm-6">
-                <div class="row border border-white border-start-0 rounded-end">
-                    <h3>Datos de Venta General</h3>
+            <div class="table-data">
+                <div id="head-grid-admin">
                 </div>
-                <div class="row border-bottom border-white">
-                    <div class="col-6">
-                        <h3 id="data-venta-admin">0</h3>
-                        <p>Venta Total</p>
+                <div id="data-generalsup">
+                </div>
+            </div>
+        </div>
+        <div class="fila-planes-sup">
+            <div></div>
+            <div class="planes-percent">
+                <div class="plan-percent-container">
+                    <div class="card">
+                        <div class="box" name="plan-percent">
+                            <div class="percent" id="measurer-sup">
+                                <svg>
+                                    <circle cx="70" cy="70" r="70"></circle>
+                                    <circle cx="70" cy="70" r="70" style="--i:0;"></circle>
+                                </svg>
+                                <div class="number">
+                                    <h2>0<span>%</span></h2>
+                                </div>
+                            </div>
+                            <h2 class="text"></h2>
+                        </div>
                     </div>
-                    <div class="col-6">
-                        <h3 id="data-meta-admin">0</h3>
-                        <p>Meta</p>
+                </div>
+                <div class="plan-percent-container">
+                    <div class="card">
+                        <div class="box" name="plan-percent">
+                            <div class="percent" id="measurer-sup">
+                                <svg>
+                                    <circle cx="70" cy="70" r="70"></circle>
+                                    <circle cx="70" cy="70" r="70" style="--i:0;"></circle>
+                                </svg>
+                                <div class="number">
+                                    <h2>0<span>%</span></h2>
+                                </div>
+                            </div>
+                            <h2 class="text"></h2>
+                        </div>
                     </div>
                 </div>
-                <div class="row border-bottom border-white">
-                    <h3>Datos de Venta por Asesor</h3>
+                <div class="plan-percent-container">
+                    <div class="card">
+                        <div class="box" name="plan-percent">
+                            <div class="percent" id="measurer-sup">
+                                <svg>
+                                    <circle cx="70" cy="70" r="70"></circle>
+                                    <circle cx="70" cy="70" r="70" style="--i:0;"></circle>
+                                </svg>
+                                <div class="number">
+                                    <h2>0<span>%</span></h2>
+                                </div>
+                            </div>
+                            <h2 class="text"></h2>
+                        </div>
+                    </div>
                 </div>
-                <div id="data-generalsup"></div>
             </div>
         </div>
     

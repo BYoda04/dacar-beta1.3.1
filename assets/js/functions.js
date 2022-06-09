@@ -151,49 +151,63 @@ const getNameAsesor = (id)=>{
     }
 }
 
+const getNameSupervisor = (cod)=>{
+    for (let i = 0; i < supApi.length; i++) {
+        if (supApi[i].camp_cod === cod) {
+            return supApi[i].name
+        }
+    }
+}
+
+const getCampCod = (cod)=>{
+    let name = cod.toLowerCase()
+    for (let i = 0; i < campAPi.length; i++) {
+        if (campAPi[i].name_camp === name) {
+            return campAPi[i].id_camp
+        }
+    }
+}
+
 const table = (id,asesorNom,listProduct,plan)=>{
     if (id !==2) {
-        dataGeneralSup.innerHTML += `<div class="border border-white p-2 mb-2 rounded" name="info-sold">
-            <div class="row border-bottom border-white">
-                <h4>${asesorNom}</h4>
+        dataGeneralSup.innerHTML += `
+        <div class="body-grid-hogar" name="info-sold">
+            <div>
+                <p>${asesorNom}</p>
             </div>
-            <div class="row">
-                <div class="col-3 border border-white">
-                    <p>${listProduct[0]}</p>
-                    <p name="sold">${plan[0]}</p>
-                </div>
-                <div class="col-3 border border-white">
-                    <p>${listProduct[1]}</p>
-                    <p name="sold">${plan[1]}</p>
-                </div>
-                <div class="col-3 border border-white">
-                    <p>${listProduct[2]}</p>
-                    <p name="sold">${plan[2]}</p>
-                </div>
-                <div class="col-3 border border-white">
-                    <p>UGI</p>
-                    <p>${plan[3]}</p>
-                </div>
+            <div>
+                <p name="sold">${plan[0]}</p>
+            </div>
+            <div>
+                <p name="sold">${plan[1]}</p>
+            </div>
+            <div>
+                <p name="sold">${plan[2]}</p>
+            </div>
+            <div class="sold">
+                <p>${plan[0] + plan[1] + plan[2]}</p>
+            </div>
+            <div class="ugi">
+                <p>${plan[3]}</p>
             </div>
         </div>`
     } else {
-        dataGeneralSup.innerHTML += `<div class="border border-white p-2 mb-2 rounded" name="info-sold">
-            <div class="row border-bottom border-white">
-                <h4>${asesorNom}</h4>
+        dataGeneralSup.innerHTML +=  `
+        <div class="body-grid-movil" name="info-sold">
+            <div>
+                <p>${asesorNom}</p>
             </div>
-            <div class="row">
-                <div class="col-4 border border-white" name="sold">
-                    <p>${listProduct[0]}</p>
-                    <p name="sold">${plan[0]}</p>
-                </div>
-                <div class="col-4 border border-white" name="sold">
-                    <p>${listProduct[1]}</p>
-                    <p name="sold">${plan[1]}</p>
-                </div>
-                <div class="col-4 border border-white" name="sold">
-                    <p>${listProduct[2]}</p>
-                    <p name="sold">${plan[2]}</p>
-                </div>
+            <div>
+                <p name="sold">${plan[0]}</p>
+            </div>
+            <div>
+                <p name="sold">${plan[1]}</p>
+            </div>
+            <div>
+                <p name="sold">${plan[2]}</p>
+            </div>
+            <div class="sold">
+                <p>${plan[0] + plan[1] + plan[2]}</p>
             </div>
         </div>`
     }
