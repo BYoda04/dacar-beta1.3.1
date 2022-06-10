@@ -300,6 +300,27 @@ svg circle:nth-child(2){
     stroke: #f79925;
 }
 
+.inversion{
+    background: #112033;
+    padding: 2rem;
+    border: 1px solid #fff;
+    color: #fff !important;
+    margin-bottom: 1.5rem;
+    text-transform: uppercase;
+}
+
+.inversion-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.inversion-button{
+    display: grid;
+    grid-auto-flow: row;
+    gap: 10rem;
+}
+
 @media only screen and (min-width:620px) {
 
     .fila{
@@ -329,6 +350,11 @@ svg circle:nth-child(2){
         display: flex;
         gap: 1rem;
         border: 1px solid #fff;
+    }
+
+    .inversion{
+        margin-bottom: 0;
+        margin-right: 5rem;
     }
 
 }

@@ -143,7 +143,7 @@ setTimeout(() => {
                                     <div class="mb-3">
                                         <div class="row">
                                             <div class="col-8">
-                                                <label for="planTrhee" class="form-label">${optionsProduct[0]}</label>
+                                                <label for="planTrhee" class="form-label">${optionsProduct[2]}</label>
                                             </div>
                                             <div class="col-4">
                                                 <input type="number" class="form-control" value="0" name="planTrhee">

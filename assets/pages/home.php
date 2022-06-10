@@ -37,11 +37,11 @@
             <div class="col row">
                 <div class="col-6">
                     <label for="exampleFormControlInput1" class="form-label">Fecha Inicio</label>
-                    <input type="date" class="form-control" id="date-start-admin" placeholder="name@example.com">
+                    <input type="date" class="form-control" id="date-start-admin">
                 </div>
                 <div class="col-6">
                     <label for="exampleFormControlInput1" class="form-label">Fecha Final</label>
-                    <input type="date" class="form-control" id="date-end-admin" placeholder="name@example.com">
+                    <input type="date" class="form-control" id="date-end-admin">
                 </div>
             </div>
             <div class="col-sm-2">
@@ -73,7 +73,7 @@
                         </div>
                         <div class="col-6">
                             <h3 id="data-meta-admin">0</h3>
-                            <p>Meta</p>
+                            <p>Objetivo</p>
                         </div>
                     </div>
                 </div>
@@ -86,7 +86,52 @@
             </div>
         </div>
         <div class="fila-planes-sup">
-            <div></div>
+        <div class="modal fade" id="exampleModalToggle" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalToggleLabel">Inversion</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <form action="" method="POST" id="inversion">
+                        <input type="date" class="form-control" id="date-inversion-admin" style="display: none;" name="date">
+                        <div class="modal-body">
+                            <div class="mb-3 row">
+                                <label for="number-inversion" class="form-label col">Inversion</label>
+                                <input type="number" step="any" class="form-control col" id="number-inversion" value="0" name="inversion">
+                            </div>
+                            <div class="mb-3 row">
+                                <label for="lead" class="form-label col">Leads</label>
+                                <input type="number" step="any" class="form-control col" id="lead" value="0" name="lead">
+                            </div>
+                            <div class="mb-3 row">
+                                <label for="google-lead" class="form-label col">Google CLicks</label>
+                                <input type="number" step="any" class="form-control col" id="google-lead" value="0" name="google">
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button class="btn btn-primary">ENVIAR</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+            <div class="inversion">
+                <div class="inversion-container">
+                    <div>
+                        <p name="inversion">inversion: 0</p>
+                        <p name="inversion">leads: 0</p>
+                        <p name="inversion">cpl: 0</p>
+                        <p name="inversion">cpa: 0</p>
+                        <p name="inversion">%venta: 0</p>
+                        <p name="inversion">%web: 0</p>
+                    </div>
+                    <div class="inversion-button">
+                        <button class="btn btn-success" data-bs-toggle="modal" href="#exampleModalToggle" role="button">INGRESAR</button>
+                        <p name="inversion">ventas: 0</p>
+                    </div>
+                </div>
+            </div>
             <div class="planes-percent">
                 <div class="plan-percent-container">
                     <div class="card">

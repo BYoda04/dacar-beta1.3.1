@@ -5,3 +5,4 @@ let urlDeleteSup = "http://localhost/dacartelecom-beta1.3.1/assets/post/account/
 let urlDeleteAsesor = "http://localhost/dacartelecom-beta1.3.1/assets/post/account/delete-asesor/delete-asesor.php"
 let urlSendDataSup = "http://localhost/dacartelecom-beta1.3.1/assets/post/data/sup/sup-data.php"
 let urlSendDataAdmin = "http://localhost/dacartelecom-beta1.3.1/assets/post/data/admin/admin-data.php"
+let urlSendInversion = "http://localhost/dacartelecom-beta1.3.1/assets/post/data/inversion/inversion-data.php"

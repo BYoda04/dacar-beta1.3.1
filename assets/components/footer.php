@@ -33,6 +33,8 @@
     <script src="./assets/js/title.js"></script>
     <!--HOME-->
     <script src="./assets/js/home.js"></script>
+    <!--INVERSION-->
+    <script src="./assets/js/inversion.js"></script>
     <!--HOME SUP-->
     <script src="./assets/js/home-sup.js"></script>
     <!--UPDATE PASSWORD-->

@@ -87,7 +87,14 @@ updateDataSold.addEventListener("submit",e=>{
             method: 'POST',
             body: formulario
         })
-        .then(r => r.json())
+        .then(r => {
+            r.json()
+            success.classList.remove('no-visible')
+            setTimeout(() => {
+                success.classList.add('no-visible')
+            }, 1000);
+        })
+        .catch(err=>console.log(err.response))
     } else {
         e.preventDefault()
         metaUpdate.classList.add('error')

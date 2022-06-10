@@ -29,7 +29,14 @@ sendData.addEventListener("click",e=>{
                 method: 'POST',
                 body: formulario
             })
-            .then(r => r.json())
+            .then(r => {
+                r.json()
+                success.classList.remove('no-visible')
+                setTimeout(() => {
+                    success.classList.add('no-visible')
+                }, 1000);
+            })
+            .catch(err=>console.log(err.response))
         } else {
             goal.classList.add('error')
         }

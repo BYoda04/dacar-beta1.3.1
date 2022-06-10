@@ -26,6 +26,11 @@
     <title>Document</title>
 </head>
 <body>
+    <div id="success" class="no-visible">
+        <div class="alert alert-success" role="alert">
+            <p>enviado <ion-icon name="checkmark-done-outline"></ion-icon></p>
+        </div>
+    </div>
     <nav class="navbar fixed-top">
         <div class="container-fluid">
             <a class="navbar-brand" href="#"><img src="./assets/img/dacartelecom-logo.webp" alt="dacartelecom"></a>

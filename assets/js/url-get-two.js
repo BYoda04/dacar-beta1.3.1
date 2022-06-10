@@ -4,3 +4,4 @@ let urlActivo = "http://localhost/dacartelecom-beta1.3.1/assets/api-rest/activo/
 let urlProduct = "http://localhost/dacartelecom-beta1.3.1/assets/api-rest/product/index.php"
 let urlVentas = "http://localhost/dacartelecom-beta1.3.1/assets/api-rest/ventas/index.php"
 let urlVentasCamp = "http://localhost/dacartelecom-beta1.3.1/assets/api-rest/ventas_camp/index.php"
+let urlInversion = "http://localhost/dacartelecom-beta1.3.1/assets/api-rest/inversion/index.php"

@@ -1,4 +1,5 @@
 dateStartAdmin.value = `${fechaActualID.getFullYear()}-${month[fechaActualID.getMonth()]}-${fechaActualID.getDate()<10 ? "0" + fechaActualID.getDate() : fechaActualID.getDate()}`
+dateInversion.value = `${fechaActualID.getFullYear()}-${month[fechaActualID.getMonth()]}-${fechaActualID.getDate()<10 ? "0" + fechaActualID.getDate() : fechaActualID.getDate()}`
 
 setTimeout(() => {
 
@@ -76,6 +77,7 @@ setTimeout(() => {
             circle[3].value = `--i:${((parseInt(total)/parseInt(meta))*100).toFixed(1)};`
             dataVentaAdmin.innerText = total
             dataMetaAdmin.innerText = meta
+            inversionValues[7].innerText = `ventas: ${total}`
         }
     }
 
@@ -281,7 +283,8 @@ setTimeout(() => {
                     percent[0].nodeValue = `${((parseInt(total)/parseInt(meta))*100).toFixed(1)}`
                     circle[3].value = `--i:${((parseInt(total)/parseInt(meta))*100).toFixed(1)};`
                     dataVentaAdmin.innerText = total
-                    dataMetaAdmin.innerText = meta 
+                    dataMetaAdmin.innerText = meta
+                    inversionValues[7].innerText = `ventas: ${total}` 
                     total = 0
                     meta = 0
                     productOne = 0
@@ -382,7 +385,8 @@ setTimeout(() => {
                     percent[0].nodeValue = `${((parseInt(total)/parseInt(meta))*100).toFixed(1)}`
                     circle[3].value = `--i:${((parseInt(total)/parseInt(meta))*100).toFixed(1)};`
                     dataVentaAdmin.innerText = total
-                    dataMetaAdmin.innerText = meta 
+                    dataMetaAdmin.innerText = meta
+                    inversionValues[7].innerText = `ventas: ${total}` 
                     
             } else {
                     let total = 0
@@ -420,7 +424,8 @@ setTimeout(() => {
                     percent[0].nodeValue = `${((parseInt(total)/parseInt(meta))*100).toFixed(1)}`
                     circle[3].value = `--i:${((parseInt(total)/parseInt(meta))*100).toFixed(1)};`
                     dataVentaAdmin.innerText = total
-                    dataMetaAdmin.innerText = meta 
+                    dataMetaAdmin.innerText = meta
+                    inversionValues[7].innerText = `ventas: ${total}` 
                     
             }
 
@@ -465,7 +470,8 @@ setTimeout(() => {
                         percent[0].nodeValue = `${((parseInt(total)/parseInt(meta))*100).toFixed(1)}`
                         circle[3].value = `--i:${((parseInt(total)/parseInt(meta))*100).toFixed(1)};`
                         dataVentaAdmin.innerText = total
-                        dataMetaAdmin.innerText = meta 
+                        dataMetaAdmin.innerText = meta
+                        inversionValues[7].innerText = `ventas: ${total}` 
                         total = 0
                         meta = 0
                         productOne = 0
@@ -558,7 +564,8 @@ setTimeout(() => {
                         percent[0].nodeValue = `${((parseInt(total)/parseInt(meta))*100).toFixed(1)}`
                         circle[3].value = `--i:${((parseInt(total)/parseInt(meta))*100).toFixed(1)};`
                         dataVentaAdmin.innerText = total
-                        dataMetaAdmin.innerText = meta 
+                        dataMetaAdmin.innerText = meta
+                        inversionValues[7].innerText = `ventas: ${total}` 
                     }
                 }
             } else {
@@ -599,7 +606,8 @@ setTimeout(() => {
                         percent[0].nodeValue = `${((parseInt(total)/parseInt(meta))*100).toFixed(1)}`
                         circle[3].value = `--i:${((parseInt(total)/parseInt(meta))*100).toFixed(1)};`
                         dataVentaAdmin.innerText = total
-                        dataMetaAdmin.innerText = meta 
+                        dataMetaAdmin.innerText = meta
+                        inversionValues[7].innerText = `ventas: ${total}` 
                     }
                 }
             }
