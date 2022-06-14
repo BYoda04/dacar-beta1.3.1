@@ -77,7 +77,7 @@ setTimeout(() => {
             circle[3].value = `--i:${((parseInt(total)/parseInt(meta))*100).toFixed(1)};`
             dataVentaAdmin.innerText = total
             dataMetaAdmin.innerText = meta
-            inversionValues[7].innerText = `ventas: ${total}`
+            inversionValues[8].innerText = `ventas: ${total}`
         }
     }
 
@@ -284,7 +284,7 @@ setTimeout(() => {
                     circle[3].value = `--i:${((parseInt(total)/parseInt(meta))*100).toFixed(1)};`
                     dataVentaAdmin.innerText = total
                     dataMetaAdmin.innerText = meta
-                    inversionValues[7].innerText = `ventas: ${total}` 
+                    inversionValues[8].innerText = `ventas: ${total}` 
                     total = 0
                     meta = 0
                     productOne = 0
@@ -386,7 +386,7 @@ setTimeout(() => {
                     circle[3].value = `--i:${((parseInt(total)/parseInt(meta))*100).toFixed(1)};`
                     dataVentaAdmin.innerText = total
                     dataMetaAdmin.innerText = meta
-                    inversionValues[7].innerText = `ventas: ${total}` 
+                    inversionValues[8].innerText = `ventas: ${total}` 
                     
             } else {
                     let total = 0
@@ -425,7 +425,7 @@ setTimeout(() => {
                     circle[3].value = `--i:${((parseInt(total)/parseInt(meta))*100).toFixed(1)};`
                     dataVentaAdmin.innerText = total
                     dataMetaAdmin.innerText = meta
-                    inversionValues[7].innerText = `ventas: ${total}` 
+                    inversionValues[8].innerText = `ventas: ${total}` 
                     
             }
 
@@ -471,7 +471,7 @@ setTimeout(() => {
                         circle[3].value = `--i:${((parseInt(total)/parseInt(meta))*100).toFixed(1)};`
                         dataVentaAdmin.innerText = total
                         dataMetaAdmin.innerText = meta
-                        inversionValues[7].innerText = `ventas: ${total}` 
+                        inversionValues[8].innerText = `ventas: ${total}` 
                         total = 0
                         meta = 0
                         productOne = 0
@@ -565,7 +565,7 @@ setTimeout(() => {
                         circle[3].value = `--i:${((parseInt(total)/parseInt(meta))*100).toFixed(1)};`
                         dataVentaAdmin.innerText = total
                         dataMetaAdmin.innerText = meta
-                        inversionValues[7].innerText = `ventas: ${total}` 
+                        inversionValues[8].innerText = `ventas: ${total}` 
                     }
                 }
             } else {
@@ -607,7 +607,7 @@ setTimeout(() => {
                         circle[3].value = `--i:${((parseInt(total)/parseInt(meta))*100).toFixed(1)};`
                         dataVentaAdmin.innerText = total
                         dataMetaAdmin.innerText = meta
-                        inversionValues[7].innerText = `ventas: ${total}` 
+                        inversionValues[8].innerText = `ventas: ${total}` 
                     }
                 }
             }

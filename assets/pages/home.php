@@ -95,6 +95,7 @@
                     </div>
                     <form action="" method="POST" id="inversion">
                         <input type="date" class="form-control" id="date-inversion-admin" style="display: none;" name="date">
+                        <input type="time" class="form-control" id="hour-inversion-admin" style="display: none;" name="hour">
                         <div class="modal-body">
                             <div class="mb-3 row">
                                 <label for="number-inversion" class="form-label col">Inversion</label>
@@ -128,7 +129,10 @@
                     </div>
                     <div class="inversion-button">
                         <button class="btn btn-success" data-bs-toggle="modal" href="#exampleModalToggle" role="button">INGRESAR</button>
-                        <p name="inversion">ventas: 0</p>
+                        <div>
+                            <p name="inversion">actualizado: 00:00</p>
+                            <p name="inversion">ventas: 0</p>
+                        </div>
                     </div>
                 </div>
             </div>

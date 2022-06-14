@@ -283,3 +283,64 @@ const hourValidate = (hour)=>{
         return hour
     }
 }
+
+const timeInput = ()=>{
+    
+    let time = new Date()
+    let hour = time.getHours()
+    let minuts = time.getMinutes()
+    let seconds = time.getSeconds()
+    let hourInput
+    let hourActual
+    let minutsActual
+    let secondsActual
+
+    if (hour > 12) {
+        if (hour-12 < 10) {
+            hourActual = "0"+(hour -12)
+        } else {
+            hourActual = hour -12
+        }
+    } else {
+        if (hour < 10) {
+            hourActual = "0"+hour
+        } else {
+            hourActual = hour
+        }
+    }
+
+    if (hour < 10) {
+        hourInput = "0"+(hour)
+    } else {
+        hourInput = (hour)
+    }
+
+    if (minuts < 10) {
+        minutsActual = "0"+minuts
+    } else {
+        minutsActual = minuts
+    }
+
+    if (seconds < 10) {
+        secondsActual = "0"+seconds
+    } else {
+        secondsActual = seconds
+    }
+
+    hourInversion.value = `${hourInput}:${minutsActual}:00`
+}
+
+const timeSet = (hour)=>{
+    let array = hour.split(":")
+    if (parseInt(array[0])>12) {
+        let hora
+        if (parseInt(array[0])-12>9) {
+            hora = `${parseInt(array[0])-12}`
+        } else {
+            hora = `0${parseInt(array[0])-12}`
+        }
+        inversionValues[7].innerText = `actualizado:  ${hora} : ${array[1]} pm`
+    } else {
+        inversionValues[7].innerText = `actualizado:  ${array[0]} : ${array[1]} am` 
+    }
+}

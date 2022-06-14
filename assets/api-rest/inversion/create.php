@@ -19,7 +19,8 @@
                         'inversion' => $row['inversion'],
                         'lead' => $row['lead'],
                         'google' => $row['lead_google'],
-                        'date' => $row['date']
+                        'date' => $row['date'],
+                        'hour' => $row['hour']
                     );
                     array_push($datos['items'],$item);
                 }
