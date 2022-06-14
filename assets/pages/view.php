@@ -2,6 +2,21 @@
 
     </nav>
         <section class="view">
+
+            <div class="row select-camp-view">
+                <div class="col-3"></div>
+                <form class="col-sm" id="camp-data-select-view">
+                    <div class="container-search-view">
+                        <p>CAMPAÑAS</p>
+                        <select class="form-select">
+                            
+                        </select>
+                        <button class="btn btn-primary mb-3">BUSCAR</button>
+                    </div>
+                </form>
+                <div class="col-3"></div>
+            </div>
+
             <table class="table view-container">
                 <thead>
                     <tr name="table">
@@ -62,18 +77,6 @@
                     </tr>
                 </tbody>
             </table>
-
-            <div class="row select-camp-view">
-                <div class="col-3"></div>
-                <form class="col-sm-6" id="camp-data-select">
-                    <h2>CAMPAÑAS</h2>
-                    <select class="form-select">
-                        
-                    </select>
-                    <button class="btn btn-primary mb-3">BUSCAR</button>
-                </form>
-                <div class="col-3"></div>
-            </div>
 
             <div class="fila measurer">
                 <div class="card-container">

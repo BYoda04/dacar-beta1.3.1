@@ -1,4 +1,9 @@
 
+if (screen.width < 767) {
+    userDesktop.classList.add('no-visible')
+    userMobile.classList.remove('no-visible')
+}
+
 dateStartSup.value = `${fechaActualID.getFullYear()}-${month[fechaActualID.getMonth()]}-${fechaActualID.getDate()<10 ? "0" + fechaActualID.getDate() : fechaActualID.getDate()}`
 
 setTimeout(() => {

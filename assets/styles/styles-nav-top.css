@@ -59,3 +59,20 @@ section{
 .no-visible{
     display: none !important;
 }
+
+.name-button-container{
+    display: flex;
+}
+
+.nav-top{
+    background: #0d6efd !important;
+}
+
+.user-data{
+    display: flex;
+    gap: 1rem;
+}
+
+.user-data p{
+    margin: 0 !important;
+}

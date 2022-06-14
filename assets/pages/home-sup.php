@@ -3,7 +3,7 @@
 
     </nav>
     <section class="home">
-        <div class="container-fluid justify-content-center align-items-center title">
+        <div class="container-fluid justify-content-center align-items-center title no-visible" id="info-user-mobile">
             <div class="col justify-content-center align-items-center">
                 <div class="row">
                     <h2 id="name"><?php echo $user->getUserName();  ?></h2>

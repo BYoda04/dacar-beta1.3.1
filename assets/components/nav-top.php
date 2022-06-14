@@ -33,10 +33,38 @@
     </div>
     <nav class="navbar fixed-top">
         <div class="container-fluid">
-            <a class="navbar-brand" href="#"><img src="./assets/img/dacartelecom-logo.webp" alt="dacartelecom"></a>
-            <button class="navbar-toggler btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
-            <span class="navbar-toggler-icon"></span>
-            </button>
+            <div class="camp-search-view">
+                <a class="navbar-brand" href="#"><img src="./assets/img/dacartelecom-logo.webp" alt="dacartelecom"></a>
+                <?php
+                    if ($user->getRol() !== 3) {
+                         
+                    } else {
+                         echo '
+                         <form class="col" id="camp-data-select">
+                             <div class="container-search-view">
+                                 <p>CAMPAÑAS</p>
+                                 <select class="form-select">
+                                     
+                                 </select>
+                                 <button class="btn btn-success mb-3">BUSCAR</button>
+                             </div>
+                         </form>';       
+                    }
+                ?>
+            </div>
+            <div class="name-button-container">
+                <div class="container-fluid justify-content-center align-items-center title nav-top" id="info-user-desktop">
+                    <div class="col justify-content-center align-items-center">
+                        <div class="user-data">
+                            <p id="name"><?php echo $user->getUserName();  ?></p>
+                            <p class="col">Cargo: <strong id="rol"><?php echo $user->getRol();  ?></strong></p>
+                        </div>
+                    </div>
+                </div>
+                <button class="navbar-toggler btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+                <span class="navbar-toggler-icon"></span>
+                </button>
+            </div>
             <div class="offcanvas offcanvas-top" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
                 <div class="offcanvas-header">
                     <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Menu</h5>
