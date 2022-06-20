@@ -9,7 +9,7 @@
                     <h2 id="name"><?php echo $user->getUserName();  ?></h2>
                 </div>
                 <div class="row">
-                    <p class="col-4" id="camp-title">campa√±a: </p>
+                    <p class="col-4" id="camp-title">campaè´–a: </p>
                     <h4 class="col-4">Cargo: <strong id="rol"><?php echo $user->getRol();  ?></strong></h4>
                     <p class="col-4" id="turn-title">turno: </p>
                 </div>

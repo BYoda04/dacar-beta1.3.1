@@ -3,20 +3,6 @@
     </nav>
     <section class="home">
 
-        <div class="container-fluid justify-content-center align-items-center title">
-            <div class="col justify-content-center align-items-center">
-                <div class="row justify-content-center align-items-center">
-                    <h2>Actualizar Datos de Venta</h2>
-                </div>
-                <div class="row justify-content-center align-items-center">
-                    <h3 id="name"><?php echo $user->getUserName();  ?></h3>
-                </div>
-                <div class="row justify-content-center align-items-center">
-                    <h4 class="col">Cargo: <strong id="rol"><?php echo $user->getRol();  ?></strong></h4>
-                </div>
-            </div>
-        </div>
-
         <div class="button-container">
             <div class="modal fade" id="exampleModalToggle" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
                 <div class="modal-dialog modal-dialog-centered">

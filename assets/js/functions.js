@@ -80,9 +80,8 @@ const product = (id)=>{
 const getId = (nom)=>{
     let arrayNom = nom.split(" ")
     let apellidoP = arrayNom[1].toLowerCase()
-    let apellidoM = arrayNom[2].toLowerCase()
     for (let i = 0; i < supApi.length; i++) {
-        if ((apellidoP === supApi[i].apellido_paterno)&&(apellidoM === supApi[i].apellido_materno)) {
+        if (apellidoP === supApi[i].apellido_paterno) {
             return supApi[i].id_supervisor
         }
     }
@@ -91,9 +90,8 @@ const getId = (nom)=>{
 const getIdAsesor = (nom)=>{
     let arrayNom = nom.split(" ")
     let apellidoP = arrayNom[1].toLowerCase()
-    let apellidoM = arrayNom[2].toLowerCase()
     for (let i = 0; i < asesorApi.length; i++) {
-        if ((apellidoP === asesorApi[i].paterno)&&(apellidoM === asesorApi[i].materno)) {
+        if (apellidoP === asesorApi[i].paterno) {
             return asesorApi[i].id_asesor
         }
     }
@@ -185,10 +183,10 @@ const table = (id,asesorNom,listProduct,plan)=>{
                 <p name="sold">${plan[2]}</p>
             </div>
             <div class="sold">
-                <p>${plan[0] + plan[1] + plan[2]}</p>
+                <p>${plan[3]}</p>
             </div>
             <div class="ugi">
-                <p>${plan[3]}</p>
+                <p>${plan[4]}</p>
             </div>
         </div>`
     } else {
@@ -207,7 +205,7 @@ const table = (id,asesorNom,listProduct,plan)=>{
                 <p name="sold">${plan[2]}</p>
             </div>
             <div class="sold">
-                <p>${plan[0] + plan[1] + plan[2]}</p>
+                <p>${plan[3]}</p>
             </div>
         </div>`
     }
